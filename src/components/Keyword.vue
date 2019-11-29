@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import { exists } from 'fs';
 
 export default {
   name: 'Keyword',
@@ -65,7 +64,6 @@ export default {
           this.arr.num2 = calc;
         }else if ( i === 3 ){
           this.arr.num3 = calc;
-        }else {
         }
 
       }
