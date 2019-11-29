@@ -1,7 +1,7 @@
 <template>
   <div class="photos">        
     <main class="main">
-        <msgInPhoto msg="きれいなとわちゃんばっかりだね"></msgInPhoto>
+        <msgInPhoto msg="いろんな思い出があるね"></msgInPhoto>
         <picsInPhoto title="You can do it!!"></picsInPhoto>
         <favInPhoto title="お気に入りの写真" ></favInPhoto>        
     </main>

@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style>
-
+.msg{
+    margin-top: 100px;
+}
 </style>
