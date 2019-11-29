@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import { exists } from 'fs';
 
 export default {
   name: 'Keyword',
@@ -40,17 +41,14 @@ export default {
   methods: {
     window:onload = () => {  
       alert('１年間経った二人へ。おめでとう！！');
-      console.log('ロードされました')
     },
     fa: function(){
-      console.log('ロードされた');
     },
     calc01: function(){
       // 今日の日付を取得
       var today = new Date();
       var t0day = new Date(today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate())
       // 今日の日時を表示
-      console.log("t0day is " + today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate());
       // 繰り返し処理
       var theDay = ["2000/08/14", "2018/11/26", "2018/04/02", "2001/03/18" ];
       for( let i=0; i<theDay.length; i++) {
@@ -68,8 +66,8 @@ export default {
         }else if ( i === 3 ){
           this.arr.num3 = calc;
         }else {
-          console.log('エラーです')
         }
+
       }
     },
     reset: function(){
