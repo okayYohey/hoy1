@@ -1,6 +1,7 @@
 <template>
 <header>
-    <h1 class="title">Happy 1 Year Anniversary!!</h1>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
+    <h1 class="title">Happy 1st Anniversary!!</h1>
 </header>
 </template>
 
@@ -20,10 +21,16 @@
     background-color: none;     
 }
 .title{
-    font-size: 6vw;
+    font-family: 'Dancing Script', cursive;
+    font-size: 9vw;
     color: #fff;
     position: absolute;
     z-index: 3;
     width: 100%;
+}
+@media screen and (min-width:768px) {
+    .title{
+        font-size: 7vw;
+    }
 }
 </style>

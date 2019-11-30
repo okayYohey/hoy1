@@ -2,7 +2,6 @@
   <div class="letters">    
     <main  class="main">  
       <div class="msg">
-        <p>お手紙が届いています</p>  
       </div>  
       <div class="letter">
           <p>とわへ</p>
@@ -101,7 +100,7 @@ export default {
     text-align: left;
     max-width: 90%;
     min-width: 250px;
-    margin: 0 auto;
+    margin: 10px auto 100px;
     /* color: #fff; */
 }
 /* .letter:hover{
@@ -111,6 +110,7 @@ export default {
 @media screen and (min-width:768px) {
   .letter{
     max-width: 700px;
+    margin: 120px auto;
   }
 }
 @font-face {
