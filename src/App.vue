@@ -169,6 +169,12 @@ p{
 .v-enter, .v-leave-to {
   opacity: 0;
 }
+/* lazy loading */
+img[lazy=loading] {
+   width: 50px;
+   height: 50px;
+   margin: 0 auto 
+  }
 @media screen and (min-width:768px) { 
     .wrapper{
         padding:0;
