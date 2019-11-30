@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="wrapper">    
     <Header></Header>
+    <transition>
     <router-view/>
+    </transition>
     <Footer></Footer>
   </div>
 </template>
@@ -53,7 +55,7 @@ time, mark, audio, video {
     background-image: linear-gradient(#feada6 0%, #f18181 100%);
     min-height: 100vh;
     min-width: 300px;
-    
+    padding: 0 0 200px 0;
 }
 /* main */
 .main{    
@@ -159,7 +161,18 @@ time, mark, audio, video {
 p{
   margin-bottom: 1rem;
 }
+
+/* ページ遷移 */
+.v-enter-active, .v-leave-active {
+  transition: opacity .5s;
+}
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
 @media screen and (min-width:768px) { 
+    .wrapper{
+        padding:0;
+    }
     .back{
         width: 7vw;
         height: 7vw;

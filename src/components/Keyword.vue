@@ -101,7 +101,7 @@ export default {
 }
 .true{
   opacity: 1;
-  transition: 0.5s
+  transition: 1s
 }
 .btn{
   width: 100px;
