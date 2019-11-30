@@ -34,9 +34,9 @@ export default {
   data: function(){
       return{
         imgSrc: [
-            require ( '../assets/happy1year (8).jpg' ),
-            require ( '../assets/happy1year (34).jpg' ),
-            require ( '../assets/happy1year (73).jpg' )
+            require ( '../assets/happy1year (100).png' ),
+            require ( '../assets/happy1year (33).jpg' ),
+            require ( '../assets/happy1year (71).jpg' )
             ],
         i: 0
       }

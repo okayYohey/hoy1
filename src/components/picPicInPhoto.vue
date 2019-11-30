@@ -223,12 +223,6 @@
         <div class="frame">
             <img class="pic" v-lazy="imgSrc[73]" alt="Happy 1 Year Anniversary!!">  
         </div>
-        <div class="frame">
-            <img class="pic" v-lazy="imgSrc[74]" alt="Happy 1 Year Anniversary!!">  
-        </div>
-        <div class="frame">
-            <img class="pic" v-lazy="imgSrc[75]" alt="Happy 1 Year Anniversary!!">  
-        </div>
         
         
     </div>
@@ -319,8 +313,6 @@ export default {
                 require("../assets/happy1year (73).jpg"),
                 require("../assets/happy1year (74).jpg"),
                 require("../assets/happy1year (75).jpg"),
-                require("../assets/happy1year (76).jpg"),
-                require("../assets/happy1year (77).jpg"),
  
               ]
       }
