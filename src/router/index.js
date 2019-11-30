@@ -42,11 +42,20 @@ const routes = [
     },
   }
 ]
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    // savedPosition is only available for popstate navigations.
+    return savedPosition
+  } else {
+    return { x: 0, y: 0 }
+  }
+}
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior
 })
 
 export default router

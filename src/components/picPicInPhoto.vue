@@ -1,238 +1,239 @@
 <template>
     <div class="pics">
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[0]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[0]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[1]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[1]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[2]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[2]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[3]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[3]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[4]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[4]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[5]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[5]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[6]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[6]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[7]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[7]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[8]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[8]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[9]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[9]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[10]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[10]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[11]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[11]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[12]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[12]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[13]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[13]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[14]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[14]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[15]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[15]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[16]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[16]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[17]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[17]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[18]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[18]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[19]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[19]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[20]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[20]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[21]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[21]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[22]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[22]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[23]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[23]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[24]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[24]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[25]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[25]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[26]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[26]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[27]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[27]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[28]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[28]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[29]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[29]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[30]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[30]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[31]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[31]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[32]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[32]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[33]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[33]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[34]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[34]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[35]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[35]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[36]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[36]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[37]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[37]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[38]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[38]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[39]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[39]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[40]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[40]" alt="Happy 1 Year Anniversary!!">  
         </div>
         
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[41]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[41]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[42]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[42]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[43]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[43]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[44]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[44]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[45]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[45]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[46]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[46]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[47]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[47]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[48]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[48]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[49]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[49]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[50]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[50]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[51]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[51]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[52]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[52]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[53]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[53]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[54]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[54]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[55]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[55]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[56]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[56]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[57]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[57]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[58]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[58]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[59]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[59]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[60]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[60]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[61]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[61]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[62]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[62]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[63]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[63]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[64]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[64]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[65]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[65]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[66]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[66]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[67]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[67]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[68]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[68]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[69]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[69]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[70]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[70]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[71]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[71]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[72]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[72]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[73]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[73]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[74]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[74]" alt="Happy 1 Year Anniversary!!">  
         </div>
         <div class="frame">
-            <img class="pic" v-bind:src="imgSrc[75]" alt="Happy 1 Year Anniversary!!">  
+            <img class="pic" v-lazy="imgSrc[75]" alt="Happy 1 Year Anniversary!!">  
         </div>
         
         
     </div>
 </template>
+
 
 <script>
 export default {
