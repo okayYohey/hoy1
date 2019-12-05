@@ -346,6 +346,15 @@ export default {
     -webkit-transform : translate(-50%,-50%);
     transform : translate(-50%,-50%);
   }
+  .pics .frame .pic[lazy=error] {
+   width: 50px;
+   height: 50px;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+  }
 @media screen and (min-width:768px) {     
     .photos .frame{
         width: 300px;
