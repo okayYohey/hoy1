@@ -39,9 +39,24 @@ const routes = [
     name: 'keyword',    
     component: function () {
       return import('../views/Keywords.vue')
-    },
+    }
+  },
+  {
+    path: '/signup',
+    name: 'signup',    
+    component: function () {
+      return import('../views/Signup.vue')
+    }
+  },
+  {
+    path: '/signin',
+    name: 'signin',    
+    component: function () {
+      return import('../views/Signin.vue')
+    }
   }
 ]
+
 const scrollBehavior = (to, from, savedPosition) => {
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
