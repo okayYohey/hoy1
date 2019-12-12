@@ -1,7 +1,7 @@
 <template>
     <div class="signup">
         <h2>Sign up</h2>
-        <input type="email" placeholder="Username" v-model="username">
+        <input type="email" placeholder="Username" v-model="email">
         <input type="password" placeholder="Password" v-model="password">
         <button @click="signUp">Register</button>
         <p>Do you have an account? 
@@ -11,29 +11,29 @@
 </template>
 
 <script>
-
+import firebase from '../components/firebase.js'
 export default {
     name: 'signup',
     components: {
     },
     data: function(){
         return{
-            username: '',
+            email: '',
             password: ''
         }
     },
     methods: {
-    signUp: function () {
-      var firebase = require("firebase/app");
-      require("firebase/auth");
-      require("firebase/firestore");
-      firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
-        .then(user => {
-          alert('Create account: ', user.email)
+    signUp: function (e) {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+        .then( user => {
+          console.log(user)
+          this.$router.push('/')
+        },
+        err => {
+          console.log(err);
+          alert(err.message);
         })
-        .catch(error => {
-          alert(error.message)
-        })
+     e.preventDefault()
     }
   }
 }

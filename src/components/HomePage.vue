@@ -10,8 +10,7 @@
       <router-link to="/photos" class="linkBtn">しゃしん</router-link>
       <router-link to="/keyword" class="linkBtn">これまで</router-link>
       <router-link to="/letter" class="linkBtn">てがみ</router-link>
-    </div> 
-    <router-link to="/signup">会員登録</router-link>   
+    </div>
   </div>
 </template>
 

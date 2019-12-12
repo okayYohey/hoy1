@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import firebase from '../components/firebase.js'
 
 Vue.use(VueRouter)
 
@@ -8,17 +9,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    },
+    component: Home,
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/letter',
@@ -26,6 +20,9 @@ const routes = [
     component: function () {
       return import( '../views/Letters.vue')
     },
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/photos',
@@ -33,12 +30,18 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "photos" */ '../views/Photos.vue')
     },
+    meta:{
+      requiresAuth: true
+    }
   },
   {
     path: '/keyword',
     name: 'keyword',    
     component: function () {
       return import('../views/Keywords.vue')
+    },
+    meta:{
+      requiresAuth: true
     }
   },
   {
@@ -46,6 +49,9 @@ const routes = [
     name: 'signup',    
     component: function () {
       return import('../views/Signup.vue')
+    },
+    meta:{
+      requiresGuest: true
     }
   },
   {
@@ -53,6 +59,29 @@ const routes = [
     name: 'signin',    
     component: function () {
       return import('../views/Signin.vue')
+    },
+    meta:{
+      requiresGuest: true
+    }
+  },
+  {
+    path: '/mypage',
+    name: 'mypage',
+    component:function(){
+      return import('../views/Mypage.vue')
+    },
+    meta:{
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/edit',
+    name: 'edit',
+    component:function(){
+      return import('../views/Edit.vue')
+    },
+    meta:{
+      requiresAuth: true
     }
   }
 ]
@@ -70,7 +99,66 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
-  scrollBehavior
+  scrollBehavior,
+  navguards
 })
+
+let firebaseAppDefined = false
+
+setInterval(() => {
+  if (!firebaseAppDefined) {
+    if (firebase.app()) {
+      // Your code here
+      console.log(firebase.name);
+      firebase.name = 'Yohei'
+      // console.log(firebase.database())
+            
+      console.log(firebase.name)
+      firebaseAppDefined = true
+    }
+  }
+}, 2000)
+
+const navguards = router.beforeEach((to, from, next)=>{
+  // Check for requireedAuth guard
+  console.log('here')
+  if(to.matched.some(record => record.meta.requiresAuth)){
+    // Check if NOT Logged in
+    console.log('beforeCheck')
+    if( ! firebase.auth().currentUser ){
+      // Go to login
+      console.log('signedin')
+      next({
+        path:'/signin',
+        query: {
+          redirect: to.fullPath
+        }
+      });
+    } else {
+      // Proceed to route 
+      next();
+    }
+  }else if (to.matched.some(record => record.meta.requiresGuest)){
+    // Check if Logged in
+    console.log('がんばれ')    
+    if(firebase.auth().currentUser){
+      // Go to login
+      console.log("You've alerady signed in")
+      next({
+        path:'/',
+        query: {
+          redirect: to.fullPath
+        }
+      });
+    } else {
+      // Proceed to route 
+      next();
+    }
+  } else {
+    next()
+  }
+})
+
+
 
 export default router

@@ -330,11 +330,17 @@ export default {
     overflow: hidden;
     box-shadow: 0 0 20px -5px rgba(0,0,0,0.8);    
     margin: 1.5vw 0;
+    cursor: pointer;
 }
 .pics .frame .pic{
     width: 100%;   
     height: 100%; 
     object-fit:cover;    
+    cursor: pointer;
+}
+.expand{
+    width: 90vw;
+    height: auto;
 }
 /* lazy loading */
 .pics .frame .pic[lazy=loading] {
@@ -355,6 +361,7 @@ export default {
     -webkit-transform : translate(-50%,-50%);
     transform : translate(-50%,-50%);
   }
+
 @media screen and (min-width:768px) {     
     .photos .frame{
         width: 300px;

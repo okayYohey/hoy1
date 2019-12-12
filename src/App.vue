@@ -1,8 +1,10 @@
 <template>
   <div id="app" class="wrapper">    
-    <Header></Header>
+    <Header :key="$route.fullPath"></Header>
+    <Loading></Loading>
+    <Nav class="navi"></Nav>
     <transition>
-    <router-view/>
+        <router-view/>
     </transition>
     <Footer></Footer>
   </div>
@@ -11,12 +13,17 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Nav from '@/components/Nav.vue'
+import Loading from '@/components/Loading.vue'
+
 export default {
   name: 'app',
   components: {
     Header,
-    Footer
-  }
+    Footer,
+    Nav,
+    Loading
+    },
 }
 </script>
 
@@ -42,7 +49,8 @@ time, mark, audio, video {
     background:transparent;
 }
 #app {
-  text-align: center;  
+  text-align: center; 
+  background: linear-gradient(#feada6, #f18181); 
 }
 
 /* wrapper */
@@ -52,7 +60,6 @@ time, mark, audio, video {
     position: relative;    
     box-sizing: border-box;
     /* width: 100vw;     */
-    background-image: linear-gradient(#feada6 0%, #f18181 100%);
     min-height: 100vh;
     min-width: 300px;
     padding: 0 0 200px 0;
