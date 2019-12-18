@@ -15,7 +15,7 @@
         <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/photos" class="url">写真</router-link></li>
         <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/keyword" class="url">数字</router-link></li>
         <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/letter" class="url">手紙</router-link></li>
-        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/edit" class="url">編集</router-link></li>
+        <!-- <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/edit" class="url">編集</router-link></li> -->
         <li class="slideNavUlList logout" v-if="isLoggedin"><button @click="logout">ログアウト</button></li>
     </ul>
     </nav>
