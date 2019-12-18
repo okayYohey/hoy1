@@ -7,16 +7,16 @@
     </div>
     <nav class="slideNav" v-bind:class="{ disable: !isActive}" v-scroll-lock="isActive">
     <ul class="slideNavUl" v-on:click="changeActive">
-        <li class="userInfo" v-show="isLoggedin">{{ username }}</li>
-        <li class="userInfo" v-show="isLoggedin">{{ isLoggedin }}</li>
-        <li class="slideNavUlList" v-show="isLoggedin"><router-link to="/" class="url">ホーム</router-link></li>
-        <li class="slideNavUlList" v-show="!isLoggedin"><router-link to="/signup" class="url">会員登録</router-link></li>
-        <li class="slideNavUlList" v-show="!isLoggedin"><router-link to="/signin" class="url">ログイン</router-link></li>
-        <li class="slideNavUlList" v-show="isLoggedin"><router-link to="/photos" class="url">写真</router-link></li>
-        <li class="slideNavUlList" v-show="isLoggedin"><router-link to="/keyword" class="url">数字</router-link></li>
-        <li class="slideNavUlList" v-show="isLoggedin"><router-link to="/letter" class="url">手紙</router-link></li>
-        <li class="slideNavUlList" v-show="isLoggedin"><router-link to="/edit" class="url">編集</router-link></li>
-        <li class="slideNavUlList logout" v-show="isLoggedin"><button @click="logout">ログアウト</button></li>
+        <li class="userInfo" v-if="isLoggedin">{{ currentUser }}</li>
+        <li class="userInfo" v-if="isLoggedin">{{ isLoggedin }}</li>
+        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/" class="url">ホーム</router-link></li>
+        <li class="slideNavUlList" v-if="!isLoggedin"><router-link to="/signup" class="url">会員登録</router-link></li>
+        <li class="slideNavUlList" v-if="!isLoggedin"><router-link to="/signin" class="url">ログイン</router-link></li>
+        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/photos" class="url">写真</router-link></li>
+        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/keyword" class="url">数字</router-link></li>
+        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/letter" class="url">手紙</router-link></li>
+        <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/edit" class="url">編集</router-link></li>
+        <li class="slideNavUlList logout" v-if="isLoggedin"><button @click="logout">ログアウト</button></li>
     </ul>
     </nav>
     <div class="touch" v-bind:class="{ touchDisable: !isActive}" v-on:click="changeActive"></div>
@@ -35,32 +35,25 @@ export default {
         return{
             isActive: false,
             isLoggedin: false,
-            username: firebase.auth().currentUser.email
+            currentUser: '',
         }
     },
-    created(){
+    beforeMount(){
             if(firebase.auth().currentUser){
                 this.currentUser = firebase.auth().currentUser.email,
-                this.isLoggedin = true,
-                console.log('Youre LOggedIn'),
-                console.log("currentuser:" + this.currentUser),
-                console.log("login?:" + this.isLoggedIn)
+                this.$nextTick(() => (this.isLoggedin = true));
             }else{
-                console.log('Not Loggedin'),
-                this.isLoggedin = false
+                this.$nextTick(() => (this.isLoggedin = false));
             }
         },
     methods:{
         changeActive:function(){
             this.isActive = !this.isActive;
-            console.log("isActive:"+this.isActive)
         },
         logout:function(){
-            console.log('You re Logged out')
             firebase.auth().signOut().then(() => {
-            this.$router.push('/signin')
+            this.$router.push('/signin');
             })
-            console.log('You re Logged out')
         }
     }
     

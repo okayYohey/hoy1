@@ -25,12 +25,10 @@ export default {
     methods: {
     signUp: function (e) {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-        .then( user => {
-          console.log(user)
+        .then( user => {// eslint-disable-line
           this.$router.push('/')
         },
         err => {
-          console.log(err);
           alert(err.message);
         })
      e.preventDefault()

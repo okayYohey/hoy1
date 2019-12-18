@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="wrapper">    
-    <Header :key="$route.fullPath"></Header>
+    <Header></Header>
     <Loading></Loading>
-    <Nav class="navi"></Nav>
+    <Nav class="navi" :key="$route.fullPath"></Nav>
     <transition>
         <router-view/>
     </transition>

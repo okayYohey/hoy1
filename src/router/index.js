@@ -104,16 +104,10 @@ const router = new VueRouter({
 })
 
 let firebaseAppDefined = false
-
 setInterval(() => {
   if (!firebaseAppDefined) {
     if (firebase.app()) {
-      // Your code here
-      console.log(firebase.name);
-      firebase.name = 'Yohei'
-      // console.log(firebase.database())
-            
-      console.log(firebase.name)
+      firebase.name = 'FirebaseYohei'
       firebaseAppDefined = true
     }
   }
@@ -121,13 +115,10 @@ setInterval(() => {
 
 const navguards = router.beforeEach((to, from, next)=>{
   // Check for requireedAuth guard
-  console.log('here')
   if(to.matched.some(record => record.meta.requiresAuth)){
     // Check if NOT Logged in
-    console.log('beforeCheck')
     if( ! firebase.auth().currentUser ){
       // Go to login
-      console.log('signedin')
       next({
         path:'/signin',
         query: {
@@ -140,10 +131,8 @@ const navguards = router.beforeEach((to, from, next)=>{
     }
   }else if (to.matched.some(record => record.meta.requiresGuest)){
     // Check if Logged in
-    console.log('がんばれ')    
     if(firebase.auth().currentUser){
       // Go to login
-      console.log("You've alerady signed in")
       next({
         path:'/',
         query: {
@@ -158,7 +147,6 @@ const navguards = router.beforeEach((to, from, next)=>{
     next()
   }
 })
-
 
 
 export default router

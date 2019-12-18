@@ -21,7 +21,7 @@
             <h3 class="cardTitle"><slot name="title3"></slot></h3>        
             <p><slot name="desc3">ハローワールド</slot></p>
         </div>
-    </div>
+    </div> 
 </template>
 
 <script>
