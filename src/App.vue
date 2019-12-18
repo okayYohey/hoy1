@@ -11,10 +11,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Nav from '@/components/Nav.vue'
 import Loading from '@/components/Loading.vue'
+import VueFormWizard from 'vue-form-wizard'
+import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+Vue.use(VueFormWizard)
 
 export default {
   name: 'app',
@@ -26,8 +30,8 @@ export default {
     },
 }
 </script>
-
 <style>
+@import 'https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.min.css';
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,

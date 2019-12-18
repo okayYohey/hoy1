@@ -1,14 +1,14 @@
 <template>
  <div class="navi">
     <div class="trig" v-on:click="changeActive">
-        <span class="line" v-bind:class="{ active: isActive}"></span>
-        <span class="line" v-bind:class="{ active: isActive}"></span>
-        <span class="line" v-bind:class="{ active: isActive}"></span>
+        <span class="line" v-bind:class="{ opened: isActive}"></span>
+        <span class="line" v-bind:class="{ opened: isActive}"></span>
+        <span class="line" v-bind:class="{ opened: isActive}"></span>
     </div>
     <nav class="slideNav" v-bind:class="{ disable: !isActive}" v-scroll-lock="isActive">
     <ul class="slideNavUl" v-on:click="changeActive">
         <li class="userInfo" v-if="isLoggedin">{{ currentUser }}</li>
-        <li class="userInfo" v-if="isLoggedin">{{ isLoggedin }}</li>
+        <!-- <li class="userInfo" v-if="isLoggedin">{{ isLoggedin }}</li> -->
         <li class="slideNavUlList" v-if="isLoggedin"><router-link to="/" class="url">ホーム</router-link></li>
         <li class="slideNavUlList" v-if="!isLoggedin"><router-link to="/signup" class="url">会員登録</router-link></li>
         <li class="slideNavUlList" v-if="!isLoggedin"><router-link to="/signin" class="url">ログイン</router-link></li>
@@ -77,17 +77,17 @@ export default {
     background-color: #fff;
     transition: .7s
 }
-.active:nth-child(1){
-    transform: rotate(225deg);
+.opened:nth-child(1){
+    transform: rotate(1125deg);
     position: relative;
     top: 8px;
 }
-.active:nth-child(2){
+.opened:nth-child(2){
     opacity: 0;
-    transform: rotate(180deg);
+    transform: rotate(380deg);
 }
-.active:nth-child(3){
-    transform: rotate(135deg);
+.opened:nth-child(3){
+    transform: rotate(1035deg);
     position: relative;
     top: -8px;
 }
@@ -146,5 +146,13 @@ export default {
 .touchDisable{
     left: -20vw
 }
-
+.userInfo{
+    color: #fff;
+    position: absolute;
+    top: 5vw;
+    left: 40vw;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    list-style: none;
+}
 </style>

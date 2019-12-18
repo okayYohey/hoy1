@@ -1,9 +1,28 @@
 <template>
     <div class="signin">
-    <h2>Sign in</h2>
-    <input type="email" placeholder="Username" v-model="email">
-    <input type="password" placeholder="Password" v-model="password">
-    <button v-on:click="signIn">Signin</button>
+    <div class="signin-card">
+      <form-wizard
+        title="ログイン" 
+        subtitle=""
+        nextButtonText="次へ" 
+        backButtonText="戻る"
+        @on-complete="signIn" 
+        @on-validate="handleValidation" 
+        finish-button-text="完了"
+        shape="tab"
+        color="#9b59b6">
+        <tab-content>
+          <div class="input-group">
+            <label for="email">メールアドレス</label>
+            <label for="password">パスワード</label>
+          </div>
+          <div class="input-group">
+            <input id="email" class="input email" type="email" placeholder="Username" v-model="email">
+            <input id="password" class="input password" type="password" placeholder="Password" v-model="password">
+          </div>
+        </tab-content>
+      </form-wizard>
+    </div>
     <p>You don't have an account? 
       <router-link to="/signup">create account now!!</router-link>
     </p>
@@ -12,19 +31,23 @@
 
 <script>
 import firebase from '../components/firebase.js'
+import {FormWizard, TabContent} from 'vue-form-wizard'
+import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
 export default {
     name: 'signin',
     components: {
+      'form-wizard': FormWizard,
+      'tab-content': TabContent
     },
     data: function(){
         return{
           email:'',
-          password:''
+          password:'',
         }
     },
     methods: { 
-       signIn: function (e) {
+       signIn: function () {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
@@ -34,7 +57,8 @@ export default {
         err =>{
           alert(err.message)
         },
-        e.preventDefault()
+        // たぶんwizardのでクリックイベントがとられてて上手くいってない
+        // this.finised.preventDefault()
         )
         
         
@@ -44,11 +68,25 @@ export default {
 </script>
 
 <style scoped>
-.signin{
-    position: relative;
-  margin-top: 100px;
-  display: grid;  
-  justify-content: center;
+.signin-card{
+  display: block;
+  background-color: #fff;
+  max-width: 95vw;
+  width: 780px;
+  min-width: 300px;
+  margin: 10vw auto;
 }
-</style>>
+label{
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+}
+.input-group{
+  display: flex;
+  justify-content: space-around;
+}
+.input{
+  width: 40%;
+}
+</style>
 
