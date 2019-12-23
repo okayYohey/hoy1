@@ -2,15 +2,15 @@
     <div class="signin">
     <div class="signin-card">
       <form-wizard
-        title="ログイン" 
-        subtitle=""
-        nextButtonText="次へ" 
-        backButtonText="戻る"
-        @on-complete="signIn" 
-        @on-validate="handleValidation" 
-        finish-button-text="完了"
-        shape="tab"
-        color="#9b59b6">
+          title="ログイン" 
+          subtitle=""
+          nextButtonText="次へ" 
+          backButtonText="戻る"
+          @on-complete="signIn" 
+          @on-validate="handleValidation" 
+          finish-button-text="完了"
+          shape="tab"
+          color="#9b59b6">
         <tab-content>
           <div class="input-group">
             <label for="email">メールアドレス</label>
